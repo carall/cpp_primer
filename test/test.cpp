@@ -1,9 +1,11 @@
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 int main()
 {
+    /*
     char ch = 127 + 2;
     ch = 0x81;
     ch = 0x9b;
@@ -26,4 +28,14 @@ int main()
     cout << "long: " << sizeof(long) << endl;
     cout << "float: " << sizeof(float) << endl;
     cout << "double: " << sizeof(double) << endl;
+    */
+    int x = 4, y = 1;
+    int cnt = 0;
+    for (int z = x ^ y; z; z = z >> 1) {
+        cout << z << endl;
+        if (z % 2 == 1) {
+            ++cnt;
+        }
+    }
+    cout << cnt << endl;
 }
